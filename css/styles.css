@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h5, h6, p {
+  margin-bottom: 16px;
+}
+
+nav {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #131212;
+  font-size: 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px orangered solid;
+}
+nav a:hover {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  color: orangered;
+}
+
+.modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* animation: fadeIn 0.6s;
+  transition: ease-out  0.8s; */
+}
+.modal .bg-click {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.modal .callout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+  z-index: 99;
+  width: 600px;
+  height: 400px;
+  background-color: #222222;
+  border-radius: 10px;
+  color: snow;
+  font-size: 20px;
+  text-align: center;
+}
+.modal .callout .form {
+  height: 300px;
+  width: 400px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.modal .callout .form .cont {
+  padding: 20px;
+}
+.modal .callout .form .cont label {
+  color: orangered;
+  font-size: 30px;
+}
+.modal .callout .form .cont input {
+  width: 100%;
+  height: 30px;
+  font-size: 30px;
+}
+.modal .callout .form .cont button {
+  color: orangered;
+  height: 70px;
+  width: 100px;
+  background: transparent;
+  -webkit-box-shadow: 0px 0px 0px transparent;
+          box-shadow: 0px 0px 0px transparent;
+  border: 2px solid orangered;
+  text-shadow: 0px 0px 0px transparent;
+}
+
+.main {
+  width: 100%;
+  height: 900px;
+  background-color: #131212;
+}
+.main__hero {
+  height: 600px;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../img/hero-home.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/hero-home.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.main__hero__text {
+  color: white;
+  height: 100px;
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 100px;
+}
+.main__hero__text h1 {
+  font-weight: 200;
+  font-size: 60px;
+  border-bottom: orangered solid 3px;
+}
+.main .flex-container {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 0 auto;
+  height: 250px;
+}
+.main .flex-container .about-info {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 220px;
+  width: 330px;
+}
+.main .flex-container .about-info p {
+  font-size: 20px;
+}
+.main .flex-container .about-info h2 {
+  text-align: center;
+  border-bottom: orangered solid 2px;
+  width: 250px;
+}
+
+@media (max-width: 1050px) {
+  .main {
+    height: 1400px;
+  }
+  .main .flex-container {
+    height: 800px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+footer {
+  width: 100%;
+  height: 40px;
+  color: white;
+  background-color: #252424;
+  line-height: 40px;
+}
+footer div {
+  width: 300px;
+  position: relative;
+  left: 200px;
+}
+footer div h2 {
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.about {
+  width: 100%;
+  height: 1600px;
+  background-color: #131212;
+}
+.about__hero {
+  height: 700px;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../img/hero-about.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/hero-about.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.about__hero__text {
+  color: white;
+  height: 100px;
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.about__hero__text h1 {
+  font-weight: 200;
+  font-size: 60px;
+  border-bottom: orangered solid 3px;
+}
+.about__hero2 {
+  height: 300px;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("../img/morewood.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/morewood.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.about__hero2__text {
+  color: white;
+  height: 100px;
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.about__hero2__text h1 {
+  font-weight: 200;
+  font-size: 30px;
+  border-bottom: orangered solid 3px;
+}
+.about .flex-container {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 0 auto;
+  height: 550px;
+}
+.about .flex-container .about-info {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 420px;
+  width: 450px;
+}
+.about .flex-container .about-info p {
+  font-size: 20px;
+}
+.about .flex-container .about-info h2 {
+  text-align: center;
+  border-bottom: orangered solid 2px;
+  width: 450px;
+}
+.about .flex-container .about-info .img {
+  height: 300px;
+  width: 450px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))), url("../img/wood.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/wood.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+@media (max-width: 1050px) {
+  .about {
+    height: 2200px;
+  }
+  .about .flex-container {
+    height: 1100px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}

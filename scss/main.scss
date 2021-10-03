@@ -1,0 +1,77 @@
+.main{
+    width: 100%;
+    height: 900px;
+    background-color: rgb(19, 18, 18);
+
+    
+    &__hero{
+        height: 600px;
+        width: 100%;
+        background-image: linear-gradient(
+          to right,  
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+        url("../img/hero-home.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        object-fit: fill;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        &__text{
+          color: white;
+          height: 100px;
+          width: 700px;
+         // background-color: yellow;
+          margin: 0 auto;
+          text-align: center;
+          line-height: 100px;
+         h1{
+          font-weight: 200;
+          font-size: 60px;
+          border-bottom: orangered solid 3px;
+         }
+        }
+
+    }
+    .flex-container{
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 0 auto;
+      //width:1000;
+      height: 250px;
+      //background-color: orchid;
+
+      .about-info{
+          //background-color: aliceblue;
+          align-items: center;
+
+          height: 220px;
+          width: 330px;
+         p{
+             font-size: 20px;
+         }
+         h2{
+           text-align: center;
+           border-bottom: orangered solid 2px;
+           width: 250px;
+         }
+      }
+  }
+}
+@media (max-width: 1050px) {
+  .main{
+      height: 1400px;
+      
+          .flex-container{
+              height: 800px;
+              flex-direction: column;
+          }
+      
+  }
+}
